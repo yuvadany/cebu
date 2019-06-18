@@ -10,11 +10,10 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.CompoundButton;
-import android.widget.SeekBar;
+import android.widget.RadioButton;
 import android.widget.Spinner;
 import android.widget.Switch;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
@@ -23,7 +22,13 @@ import com.google.android.gms.ads.AdView;
 public class SettingsActivity extends AppCompatActivity {
     private AdView mAdView;
     private Switch readMode;
-    public static SharedPreferences sharedpreferences, sharedPreferencesReadMode, sharedPreferencesFont;
+    public static final String SHARED_PREF_ENGLISH_BIBLE = "english_bible";
+    public static final String BIBLE_ENGLISH = "bible";
+    public static final String kjv_textfiles = "kjv_";
+    public static final String niv_textfiles = "niv_";
+    public static String englishBible_file = niv_textfiles;
+    RadioButton niv, kjv;
+    public static SharedPreferences sharedpreferences, sharedPreferencesReadMode, sharedPreferencesFont, englishBiblePrefrences;
     public static final String SHARED_PREF_FONT_SIZE = "font_size";
     public static final float TEXT_FONT_SIZE = 13;
     public static final String TEXT_FONT_SIZE_VAR = "text_float_size";
@@ -44,6 +49,15 @@ public class SettingsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
         setTitle("Settings");
+        niv = (RadioButton) findViewById(R.id.niv);
+        kjv = (RadioButton) findViewById(R.id.kjv);
+        englishBiblePrefrences = getSharedPreferences(SHARED_PREF_ENGLISH_BIBLE, Context.MODE_PRIVATE);
+        englishBible_file = englishBiblePrefrences.getString(BIBLE_ENGLISH, niv_textfiles);
+        if (englishBible_file.equalsIgnoreCase(niv_textfiles)) {
+            niv.setChecked(true);
+        } else if (englishBible_file.equalsIgnoreCase(kjv_textfiles)) {
+            kjv.setChecked(true);
+        }
         fontSizeSpinner = (Spinner) findViewById(R.id.fontSizespinner);
         sharedPreferencesFont = getSharedPreferences(SHARED_PREF_FONT_SIZE, Context.MODE_PRIVATE);
         fontSizeSpinner.setSelection(sharedPreferencesFont.getInt(TEXT_FONT_SIZE_SELECTED, 0));
@@ -115,6 +129,34 @@ public class SettingsActivity extends AppCompatActivity {
             getSupportActionBar().setDisplayShowHomeEnabled(true);
         }
         // Back button ends
+        niv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                boolean checked = ((RadioButton) v).isChecked();
+                // Check which radiobutton was pressed
+                if (checked) {
+                    englishBiblePrefrences = getSharedPreferences(SHARED_PREF_ENGLISH_BIBLE, Context.MODE_PRIVATE);
+                    SharedPreferences.Editor editorBibleEnglish = englishBiblePrefrences.edit();
+                    editorBibleEnglish.putString(BIBLE_ENGLISH, niv_textfiles);
+                    editorBibleEnglish.commit();
+                    reloadMainActivity();
+                }
+            }
+        });
+        kjv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                boolean checked = ((RadioButton) v).isChecked();
+                // Check which radiobutton was pressed
+                if (checked) {
+                    englishBiblePrefrences = getSharedPreferences(SHARED_PREF_ENGLISH_BIBLE, Context.MODE_PRIVATE);
+                    SharedPreferences.Editor editorBibleEnglish = englishBiblePrefrences.edit();
+                    editorBibleEnglish.putString(BIBLE_ENGLISH, kjv_textfiles);
+                    editorBibleEnglish.commit();
+                    reloadMainActivity();
+                }
+            }
+        });
     }
 
     public void setNightMode() {

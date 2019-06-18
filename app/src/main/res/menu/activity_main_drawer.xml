@@ -1,16 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:title="Cebuano-English Holy Bible">
+    <item android:title="@string/app_name">
         <menu>
             <item
                 android:id="@+id/settings"
                 android:icon="@drawable/ic_menu_manage"
                 android:title="Settings" />
             <item
+                android:id="@+id/notes"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Notes" />
+            <item
                 android:id="@+id/bookmark"
                 android:icon="@drawable/ic_menu_send"
                 android:title="Bookmarks" />
+            <item
+                android:id="@+id/noAds"
+                android:icon="@drawable/ic_menu_send"
+                android:title="App Without Ads"  />
             <item
                 android:id="@+id/praises"
                 android:icon="@drawable/ic_menu_send"

@@ -25,8 +25,13 @@ public class DBHelper
     private static final String DATABASE_NAME = "dailyverseCebuanoEnglish1.sqlite";
     private static final int DATABASE_VERSION = 1;
     private static final String DB_PATH_SUFFIX = "/databases/";
-    static Context ctx;
     Bundle bundle = new Bundle();
+    private static final String DATE = "date";
+    private static final String ID = "id";
+    private static final String NOTES_TABLE = "notes";
+    private static final String NOTES_TITLE = "notes_title";
+    private static final String NOTES_MESSAGE = "notes_message";
+    static Context ctx;
 
     public DBHelper(Context paramContext)
     {
@@ -246,7 +251,7 @@ public class DBHelper
             System.out.println("Error in saveBookmark");
         }
         ArrayList localArrayList = new ArrayList();
-        Cursor localCursor = getReadableDatabase().rawQuery("SELECT VERSE,DATE FROM BOOKMARK order by DATE desc", null);
+        Cursor localCursor = getReadableDatabase().rawQuery("SELECT VERSE,DATE FROM BOOKMARK order by id desc", null);
         while (localCursor.moveToNext()) {
             localArrayList.add(localCursor.getString(1) + "# \n" + localCursor.getString(0));
         }
@@ -271,6 +276,137 @@ public class DBHelper
         }
     }
 
+    public void saveNote(String title, String message) {
+        File localFile = ctx.getDatabasePath(DATABASE_NAME);
+        try {
+            if (!localFile.exists()) {
+                CopyDataBaseFromAsset();
+            }
+        } catch (Exception e) {
+            System.out.println("Error in saveNote");
+        }
+        ArrayList localArrayList = new ArrayList();
+        ContentValues localContentValues = new ContentValues();
+        localContentValues.put(NOTES_TITLE, title);
+        localContentValues.put(NOTES_MESSAGE, message);
+        localContentValues.put(DATE, getCurrentDate());
+        try {
+            getWritableDatabase().insertOrThrow(NOTES_TABLE, null, localContentValues);
+            getWritableDatabase().close();
+        } catch (Exception exception) {
+            //  Log.i("myTag", "saveNote Exception #  " + exception);
+        }
+    }
+
+    public void updateNote(String id, String title, String message) {
+        File localFile = ctx.getDatabasePath(DATABASE_NAME);
+        try {
+            if (!localFile.exists()) {
+                CopyDataBaseFromAsset();
+            }
+        } catch (Exception e) {
+            System.out.println("Error in saveNote");
+        }
+        ArrayList localArrayList = new ArrayList();
+        ContentValues localContentValues = new ContentValues();
+        //localContentValues.put(ID, id);
+        localContentValues.put(NOTES_TITLE, title);
+        localContentValues.put(NOTES_MESSAGE, message);
+        localContentValues.put(DATE, getCurrentDate());
+        String sql = "UPDATE " + NOTES_TABLE + " SET " + "notes_title = " + title + " , notes_message = "
+                + message + " WHERE id=" + id;
+        try {
+            //getWritableDatabase().update(NOTES_TABLE, null, localContentValues);
+            //  getWritableDatabase().insertOrThrow(NOTES_TABLE, null, localContentValues);
+            SQLiteDatabase db = getWritableDatabase();
+            db.update(NOTES_TABLE, localContentValues, "id=" + id, null);
+            //getWritableDatabase().execSQL(sql);
+            getWritableDatabase().close();
+        } catch (Exception exception) {
+            Log.i("myTag", "updateNote #  " + exception);
+        }
+    }
+
+    public String[] getAllNotes() {
+        File localFile = ctx.getDatabasePath(DATABASE_NAME);
+        try {
+            if (!localFile.exists()) {
+                CopyDataBaseFromAsset();
+            }
+        } catch (Exception e) {
+            System.out.println("Error in getAllNotes");
+        }
+        ArrayList localArrayList = new ArrayList();
+        Cursor localCursor = getReadableDatabase().rawQuery("SELECT id,date,notes_title FROM notes order by id desc", null);
+        while (localCursor.moveToNext()) {
+            localArrayList.add(localCursor.getString(0) + ". " + localCursor.getString(1) + "# \n" + localCursor.getString(2));
+            // Log.i("getAllNotes", "getAllNotes #  " +localCursor.getString(0));
+        }
+        return (String[]) localArrayList.toArray(new String[localArrayList.size()]);
+    }
+
+    public String getNotesById(String id) {
+        File localFile = ctx.getDatabasePath(DATABASE_NAME);
+        ArrayList localArrayList = new ArrayList();
+        String message = "";
+        try {
+            if (!localFile.exists()) {
+                CopyDataBaseFromAsset();
+            }
+        } catch (Exception e) {
+            System.out.println("Error in getNotesById");
+        }
+        try {
+            Cursor localCursor = getReadableDatabase().rawQuery("Select notes_title,notes_message from notes where id ='" + id + "'", null);
+            while (localCursor.moveToNext()) {
+                message = "Title # " + localCursor.getString(0) + "\n Message \n " + localCursor.getString(1);
+            }
+        } catch (Exception e) {
+            Log.i("myTag", "getNotesById Exception#  " + e);
+        }
+        return message;
+    }
+
+    public String getTitleMessageById(String id) {
+        File localFile = ctx.getDatabasePath(DATABASE_NAME);
+        ArrayList localArrayList = new ArrayList();
+        String messageTitle = "";
+        try {
+            if (!localFile.exists()) {
+                CopyDataBaseFromAsset();
+            }
+        } catch (Exception e) {
+            System.out.println("Error in getNotesById");
+        }
+        try {
+            Cursor localCursor = getReadableDatabase().rawQuery("Select notes_title,notes_message from notes where id ='" + id + "'", null);
+            while (localCursor.moveToNext()) {
+                messageTitle = localCursor.getString(0) + "#" + localCursor.getString(1);
+            }
+        } catch (Exception e) {
+            Log.i("myTag", "getTitleMessageById Exception#  " + e);
+        }
+        return messageTitle;
+    }
+
+
+    public void deleteNote(String id) {
+        File localFile = ctx.getDatabasePath(DATABASE_NAME);
+        String whereClause = "id=?";
+        try {
+            if (!localFile.exists()) {
+                CopyDataBaseFromAsset();
+            }
+        } catch (Exception e) {
+            System.out.println("Error in deleteNote");
+        }
+        try {
+            getWritableDatabase().delete(NOTES_TABLE, whereClause, new String[]{id});
+            getWritableDatabase().close();
+        } catch (Exception exception) {
+            Log.i("myTag", "deleteNote Exception #  " + exception);
+        }
+    }
     public String getCurrentDate() {
         Date date = new Date();
         SimpleDateFormat formatter = new SimpleDateFormat("MMM-dd-yyyy HH:mm:ss");
