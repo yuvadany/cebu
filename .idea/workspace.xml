@@ -10,17 +10,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="20324bab-8fd6-41a8-a6e2-52d5b1a08684" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/bible/englishbible/cebuanobible/AddNotesActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/bible/englishbible/cebuanobible/EditNotesActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/bible/englishbible/cebuanobible/NotesActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/bible/englishbible/cebuanobible/NotesViewActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/pencil.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/pencil_notes.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_add_notes.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_edit_notes.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_notes.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_notes_view.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/menu/notes_menu.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -29,20 +18,14 @@
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/dailyverseCebuanoEnglish1.sqlite" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/bible/englishbible/cebuanobible/DBHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/bible/englishbible/cebuanobible/DBHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/bible/englishbible/cebuanobible/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/bible/englishbible/cebuanobible/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/bible/englishbible/cebuanobible/SettingsActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/bible/englishbible/cebuanobible/SettingsActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/app_bar_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/app_bar_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/notes_popup.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/notes_popup.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/menu/activity_main_drawer.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/menu/activity_main_drawer.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/menu/many_options.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/menu/many_options.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -144,11 +127,12 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_add_notes.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/bible/englishbible/cebuanobible/AddNotesActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/menu/activity_main_drawer.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/bible/englishbible/cebuanobible/MainActivity.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="28" />
     <option name="y" value="26" />
     <option name="width" value="1346" />
@@ -168,6 +152,10 @@
           <expand>
             <path>
               <item name="Cebuano" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+            </path>
+            <path>
+              <item name="Cebuano" type="1abcf292:AndroidViewProjectNode" />
               <item name="Gradle Scripts" type="ae0cef3a:AndroidBuildScriptsGroupNode" />
             </path>
           </expand>
@@ -182,7 +170,7 @@
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="device.picker.selection" value="Android_8" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable" />
-    <property name="last_opened_file_path" value="E:/Hindi/HB" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../CebuanoPay" />
     <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
     <property name="sync.plugin.last.upgrade.timestamp" value="1556683425117" />
   </component>
@@ -305,10 +293,10 @@
       <window_info id="Image Layers" order="1" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="Designer" order="3" />
-      <window_info id="Build Variants" order="4" sideWeight="0.51983297" side_tool="true" weight="0.24281392" />
+      <window_info id="Build Variants" order="4" sideWeight="0.52040815" side_tool="true" visible="true" weight="0.24281392" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Resources Explorer" order="6" />
-      <window_info active="true" content_ui="combo" id="Project" order="7" sideWeight="0.47916666" visible="true" weight="0.24281392" />
+      <window_info active="true" content_ui="combo" id="Project" order="7" sideWeight="0.47959185" visible="true" weight="0.24281392" />
       <window_info id="Captures" order="8" sideWeight="0.5017007" side_tool="true" weight="0.25037822" />
       <window_info anchor="bottom" id="Find" order="0" weight="0.32993197" />
       <window_info anchor="bottom" id="Logcat" order="1" weight="0.25" />
@@ -317,7 +305,7 @@
       <window_info anchor="bottom" id="Terminal" order="4" weight="0.32993197" />
       <window_info anchor="bottom" id="Version Control" order="5" weight="0.32993197" />
       <window_info anchor="bottom" id="Event Log" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Build" order="7" visible="true" weight="0.18877551" />
+      <window_info anchor="bottom" id="Build" order="7" weight="0.34183672" />
       <window_info anchor="bottom" id="Android Profiler" order="8" />
       <window_info anchor="bottom" id="Run" order="9" />
       <window_info anchor="right" id="Capture Analysis" order="0" />
@@ -332,19 +320,19 @@
       <window_info id="Image Layers" order="1" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="Designer" order="3" />
-      <window_info id="Build Variants" order="4" sideWeight="0.5102564" side_tool="true" weight="0.25037822" />
+      <window_info active="true" id="Build Variants" order="4" sideWeight="0.52196383" side_tool="true" visible="true" weight="0.24281392" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Resources Explorer" order="6" />
-      <window_info active="true" content_ui="combo" id="Project" order="7" sideWeight="0.4897436" visible="true" weight="0.24281392" />
+      <window_info content_ui="combo" id="Project" order="7" sideWeight="0.47803617" weight="0.24281392" />
       <window_info id="Captures" order="8" sideWeight="0.5017007" side_tool="true" weight="0.25037822" />
       <window_info anchor="bottom" id="Find" order="0" weight="0.32993197" />
-      <window_info anchor="bottom" id="Logcat" order="1" visible="true" weight="0.25" />
+      <window_info anchor="bottom" id="Logcat" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="2" weight="0.32993197" />
       <window_info anchor="bottom" id="Debug" order="3" />
       <window_info anchor="bottom" id="Terminal" order="4" weight="0.32993197" />
       <window_info anchor="bottom" id="Version Control" order="5" weight="0.32993197" />
       <window_info anchor="bottom" id="Event Log" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Build" order="7" weight="0.33673468" />
+      <window_info anchor="bottom" id="Build" order="7" weight="0.34183672" />
       <window_info anchor="bottom" id="Android Profiler" order="8" />
       <window_info anchor="bottom" id="Run" order="9" />
       <window_info anchor="right" id="Capture Analysis" order="0" />
@@ -543,14 +531,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="40" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -573,13 +553,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="17" column="25" lean-forward="true" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="27" lean-forward="true" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
         </state>
       </provider>
     </entry>
@@ -726,15 +699,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="36" lean-forward="true" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
+          <folding>
+            <element signature="e#341#359#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/bible/englishbible/cebuanobible/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="531" column="263" selection-start-line="531" selection-start-column="246" selection-end-line="531" selection-end-column="263" />
-          <folding>
-            <element signature="e#9070#9101#0" expanded="true" />
-            <element signature="e#9103#9135#0" expanded="true" />
-            <element signature="e#43397#43440#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="493">
+          <caret line="123" lean-forward="true" selection-start-line="123" selection-end-line="123" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>

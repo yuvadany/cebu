@@ -115,12 +115,12 @@ public class MainActivity extends AppCompatActivity
     public static final String BACKROUND_COLOUR_VAR = "Background_Colour_Var";
     public static final int BLACK_COLOUR = Color.parseColor("#000000");
     public static final int WHITE_COLOUR = Color.parseColor("#f2f2f2");
-    public static final String app_url = "https://play.google.com/store/apps/details?id=com.englishbible.xhosabible";
-    public static final String developer_id = "https://play.google.com/store/apps/developer?id=YUVARAJ+PALANISAMY";
-    public static final String extraSubject = "The Holy Bible Xhosa & English Bible Parallel";
-    public static final String extraText = "\nHi,\n Check on this Holy Bible Xhosa & English Parallel App\n\n" + app_url + " \n\n";
-    public static final String bibleShare = "Xhosa & English Bible Share";
-    public static final String pay_app_url = "https://play.google.com/store/apps/details?id=noads.englishbible.xhosabible";
+    public static final String app_url = "https://play.google.com/store/apps/details?id=bible.englishbible.cebuanobible";
+    public static final String developer_id ="https://play.google.com/store/apps/developer?id=YUVARAJ+PALANISAMY";
+    public static final String extraSubject = "The Holy Bible Cebuano & English Bible Parallel";
+    public static final String extraText ="\nHi,\n Check on this Holy Bible Cebuano & English Parallel App\n\n" + app_url + " \n\n";
+    public static final String bibleShare = "Cebuano & English Bible Share";
+    public static final String pay_app_url = "https://play.google.com/store/apps/details?id=noads.englishbible.cebuanobible";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
