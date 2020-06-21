@@ -14,5 +14,7 @@
         android:id="@+id/notesList"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:divider="@null"
+        android:dividerHeight="5dp"
         android:paddingBottom="50.0dip" />
 </RelativeLayout>

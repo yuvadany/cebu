@@ -30,7 +30,7 @@
             <item
                 android:id="@+id/songs"
                 android:icon="@drawable/ic_menu_send"
-                android:title="Worship Songs English (700+)"  />
+                android:title="2000 Worship Songs English"  />
             <item
                 android:id="@+id/nav_share"
                 android:icon="@drawable/ic_menu_share"

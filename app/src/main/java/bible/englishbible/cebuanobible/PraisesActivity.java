@@ -17,12 +17,11 @@ import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 
 public class PraisesActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
-    String[] praisesArray = {"1-100", "101-200", "201-300", "301-400", "401-500",
-            "501-600", "601-700", "701-800", "801-900", "901-1000"};
+    String[] praisesArray = {"1-100"};
     ScrollView scroll;
     Spinner praises_spinner;
     String ta_verse;
-    DBHelper dbhelper = new DBHelper(this);
+    DBHelperSongs dbhelper = new DBHelperSongs(this);
     TextView praises_text;
     String sp1;
     private AdView mAdView;
@@ -95,7 +94,7 @@ public class PraisesActivity extends AppCompatActivity implements AdapterView.On
             case R.id.praises_spinner: {
                 String praises = "No verses";
                 try {
-                    praises = dbhelper.getPraises(getList(sp1));
+                    praises = dbhelper.getPraises();
                 } catch (Exception e) {
 
                 }
@@ -109,30 +108,7 @@ public class PraisesActivity extends AppCompatActivity implements AdapterView.On
             }
         }
     }
-    public String getList(String number) {
-        if (number.equalsIgnoreCase("1-100")) {
-            return "100";
-        } else if (number.equalsIgnoreCase("101-200")) {
-            return "200";
-        } else if (number.equalsIgnoreCase("201-300")) {
-            return "300";
-        } else if (number.equalsIgnoreCase("301-400")) {
-            return "400";
-        } else if (number.equalsIgnoreCase("401-500")) {
-            return "500";
-        } else if (number.equalsIgnoreCase("501-600")) {
-            return "600";
-        } else if (number.equalsIgnoreCase("601-700")) {
-            return "700";
-        } else if (number.equalsIgnoreCase("701-800")) {
-            return "800";
-        } else if (number.equalsIgnoreCase("801-900")) {
-            return "900";
-        } else if (number.equalsIgnoreCase("901-1000")) {
-            return "1000";
-        }
-        return "500";
-    }
+
     @Override
     public void onPause() {
         if (mAdView != null) {

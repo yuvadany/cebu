@@ -93,6 +93,7 @@ public class MainActivity extends AppCompatActivity
     TextView todayverse;
     String verseToday;
     DBHelper dbhelper = new DBHelper(this);
+    DBHelperSongs vod = new DBHelperSongs(this);
     String searchResult = "test";
     String verseSelected = "Amen";
     String verse_selected = "Amen";
@@ -817,8 +818,14 @@ public class MainActivity extends AppCompatActivity
                 Calendar cal = Calendar.getInstance();
                 int doy = cal.get(Calendar.DAY_OF_YEAR);
                 //this.dbhelper.openDataBase();
-                verseDate = dbhelper.getVerse(doy);
-                Toast.makeText(MainActivity.this, verseDate.get(0), Toast.LENGTH_LONG).show();
+                verseDate = vod.getVerse(doy);
+                // Toast.makeText(Main2Activity.this, verseDate.get(0), Toast.LENGTH_LONG).show();
+                Bundle localBundle = new Bundle();
+                //Toast.makeText(getBaseContext(), story, Toast.LENGTH_LONG).show();
+                Intent localIntent = new Intent(MainActivity.this, verseActivity.class);
+                localBundle.putString("verse", verseDate.get(0));
+                localIntent.putExtras(localBundle);
+                MainActivity.this.startActivity(localIntent);
             } catch (Exception e) {
             }
         } else if (id == R.id.songs) {
