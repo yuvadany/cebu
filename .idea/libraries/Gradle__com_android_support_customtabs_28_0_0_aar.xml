@@ -2,10 +2,14 @@
   <library name="Gradle: com.android.support:customtabs:28.0.0@aar">
     <ANNOTATIONS>
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/82ffd34c18ca6be3eb4e6e84a43a2bba/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/71e34f476ae5ea81b456d756703c344f/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/82ffd34c18ca6be3eb4e6e84a43a2bba/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/82ffd34c18ca6be3eb4e6e84a43a2bba/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/71e34f476ae5ea81b456d756703c344f/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/71e34f476ae5ea81b456d756703c344f/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/71e34f476ae5ea81b456d756703c344f/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

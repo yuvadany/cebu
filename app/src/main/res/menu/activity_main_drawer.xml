@@ -16,10 +16,6 @@
                 android:icon="@drawable/ic_menu_send"
                 android:title="Bookmarks" />
             <item
-                android:id="@+id/noAds"
-                android:icon="@drawable/ic_menu_send"
-                android:title="App Without Ads"  />
-            <item
                 android:id="@+id/praises"
                 android:icon="@drawable/ic_menu_send"
                 android:title="1000 Praises English"  />
